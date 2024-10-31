@@ -40,7 +40,6 @@ if j.status_code == 200:
         r = f'ss://{q}#{title}'
         result += r + '\n'
     
-    # 将结果进行 Base64 编码后写入文件
     encoded_result = base64.b64encode(result.encode('utf-8')).decode('utf-8')
     with open('ss.txt', 'w') as file:
         file.write(encoded_result)
