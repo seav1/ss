@@ -1,3 +1,5 @@
+# fetch_ss.py
+
 import requests
 import base64
 import json
@@ -29,9 +31,14 @@ if j.status_code == 200:
     l = binascii.unhexlify(k)
     m = f(l, d, e)
     n = json.loads(m)
+    
+    result = ""
+    for o in n['data']:
+        p = f'aes-256-cfb:{o["password"]}@{o["ip"]}:{o["port"]}'
+        q = base64.b64encode(p.encode('utf-8')).decode('utf-8')
+        r = f'ss://{q}#{o["title"]}'
+        result += r + '\n'
+    
+    encoded_result = base64.b64encode(result.encode('utf-8')).decode('utf-8')
     with open('ss.txt', 'w') as file:
-        for o in n['data']:
-            p = f'aes-256-cfb:{o["password"]}@{o["ip"]}:{o["port"]}'
-            q = base64.b64encode(p.encode('utf-8')).decode('utf-8')
-            r = f'ss://{q}#{o["title"]}'
-            file.write(r + '\n')
+        file.write(encoded_result)
