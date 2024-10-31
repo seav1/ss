@@ -36,7 +36,7 @@ if j.status_code == 200:
     for o in n['data']:
         p = f'aes-256-cfb:{o["password"]}@{o["ip"]}:{o["port"]}'
         q = base64.b64encode(p.encode('utf-8')).decode('utf-8')
-        title = o["title"].replace(",", "-")
+        title = o["title"].replace(", ", "-")
         r = f'ss://{q}#{title}'
         result += r + '\n'
     
