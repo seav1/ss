@@ -1,1 +1,7 @@
-# ss
+# ss订阅
+```
+https://raw.githubusercontent.com/seav1/ss/main/ss.txt
+```
+```
+https://raw.staticdn.net/seav1/ss/main/ss.txt
+```
