@@ -5,3 +5,6 @@ https://raw.githubusercontent.com/seav1/ss/main/ss.txt
 ```
 https://cdn.jsdelivr.net/gh/seav1/ss@main/ss.txt
 ```
+```
+https://ghproxy.lvedong.eu.org/https://raw.githubusercontent.com/seav1/ss/main/ss.txt
+```
