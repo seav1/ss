@@ -1,5 +1,3 @@
-# fetch_ss.py
-
 import requests
 import base64
 import json
